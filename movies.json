@@ -1,0 +1,30 @@
+{
+    "movie1": {
+        "genre" : "Comedy",
+        "Title" : "LKSJ",
+        "Year" : "2012",
+        "director" : "jadi osidja",
+        "review" : "Nice movie"
+    },
+    "movie2": {
+        "genre" : "Comedy",
+        "Title" : "LKSJ",
+        "Year" : "2013",
+        "director" : "jadi osidja",
+        "review" : "Nice movie"
+    },
+    "movie3": {
+        "genre" : "Comedy",
+        "Title" : "LKSJ",
+        "Year" : "2014",
+        "director" : "jadi osidja",
+        "review" : "Nice movie"
+    },
+    "movie4": {
+        "genre" : "Comedy",
+        "Title" : "LKSJ",
+        "Year" : "2015",
+        "director" : "jadi osidja",
+        "review" : "Nice movie"
+    }
+  }
