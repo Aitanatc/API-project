@@ -18,5 +18,8 @@ content-type: application/json
 "genre":"genre", "title":"Movietitle", "year":"year", "director":"NAME", "review":"review"
 }
 
+# DELETE MOVIE REVIEW
+DELETE  http://localhost:4000/movies/633530196e54d386a8c97725
+
 # RENDER LINKS
 

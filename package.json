@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/Aitanatc/API-project#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
+    "express-validator": "^6.14.2",
     "mongodb": "^4.10.0",
     "package-lock.json": "^1.0.0",
     "swagger-stats": "^0.99.2",

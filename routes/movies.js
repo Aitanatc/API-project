@@ -15,5 +15,8 @@ router.post('/', moviesController.createMovie);
 //Edit 
 router.put('/', moviesController.updateMovie);
 
+//delete a contact
+router.delete('/:id', moviesController.deleteMovie);
+
 
 module.exports = router;

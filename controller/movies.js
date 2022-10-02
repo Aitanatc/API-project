@@ -54,13 +54,27 @@ const updateMovie = async (req, res) => {
     res.status(500).json(response.error || 'Sorry, an error occurred.');
   }
 };
-
+const deleteMovie = async  (req, res) => {
+  const userId = new ObjectId(req.params.id);
+  const response = await mongodb
+  .getDb()
+  .db("Movies")
+  .collection("Movies")
+  .remove({_id: userId }, true);
+  console.log(response);
+  if (response.deletedCount > 0) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || "An error ocurred.")
+  }
+};
 
 
 module.exports = {
   getAll,
   getSingle,
   createMovie,
-  updateMovie
+  updateMovie,
+  deleteMovie
 };
 
