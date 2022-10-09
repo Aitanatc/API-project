@@ -9,6 +9,12 @@ router.use('/auth', (req, res) => {
         `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`,
     );
 });
+router.use('/authfb', (req, res) => {
+    res.redirect(
+        `https://www.facebook.com/dialog/oauth?client_id=myclientid&redirect_uri=encodedRedirectURL`
+    );
+});
+
 
 router.use('/oauth-callback', (req, res) => {
     res.redirect(

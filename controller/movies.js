@@ -21,6 +21,18 @@ const getSingle = async (req, res, next) => {
     res.status(200).json(lists[0]);
   });
 };
+const getSome = async (req, res, next) => {
+  const genre = new ObjectId(req.params.genre);
+  const result = await mongodb
+    .getDb()
+    .db('Movies')
+    .collection('Movies')
+    .find({genre: genre});
+  result.toArray().then((lists) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(lists[0]);
+  });
+};
 
 const createMovie = async (req, res) => {
   const movie = {
@@ -44,7 +56,7 @@ const updateMovie = async (req, res) => {
   };
   const response = await mongodb
     .getDb()
-    .db()
+    .db('Movies')
     .collection('Movies')
     .replaceOne({ _id: userId }, movie);
   console.log(response);
@@ -73,6 +85,7 @@ const deleteMovie = async  (req, res) => {
 module.exports = {
   getAll,
   getSingle,
+  getSome,
   createMovie,
   updateMovie,
   deleteMovie
